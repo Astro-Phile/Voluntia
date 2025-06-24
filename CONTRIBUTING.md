@@ -95,4 +95,5 @@ Or pick something tagged **`good first issue`** and get started today!
 ---
 
 With gratitude,
+
 **Team Voluntree 🌳**
