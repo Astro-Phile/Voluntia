@@ -60,7 +60,7 @@ We're actively welcoming:
 ## 💼 Credits & Leadership
 
 **Voluntree** is founded and led by  
-`👤 S Kashyap` ([@yourGitHubUsername](https://github.com/yourGitHubUsername))  
+`👤 Aditya Kashyap` ([@yourGitHubUsername](https://github.com/Astro-Phile))  
 with support from a global team of contributors and learners.
 
 ---
