@@ -89,22 +89,10 @@ Every contribution — big or small — makes Voluntree better.
 We value kindness, consistency, and collaboration. 🌍
 
 Come say hello in [Discord](#)
-See our open [Issues](https://github.com/yourusername/voluntree/issues)
+See our open [Issues](https://github.com/Astro-Phile/Voluntree/issues)
 Or pick something tagged **`good first issue`** and get started today!
 
 ---
 
 With gratitude,
 **Team Voluntree 🌳**
-
-```
-
----
-
-✅ After pasting:
-- Replace `yourusername` with your actual GitHub username.
-- Replace `Discord` link placeholder with your invite link (when ready).
-- Save the file as `CONTRIBUTING.md` in your repo root.
-
-Ready for `.gitignore`, `LICENSE`, or the GitHub issue templates next?
-```
