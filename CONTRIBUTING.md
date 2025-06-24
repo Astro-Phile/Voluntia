@@ -40,7 +40,7 @@ You don’t need to know everything — just bring your curiosity.
 2. **Clone your fork locally**
    ```bash
    git clone https://github.com/yourusername/voluntree.git
-````
+   ````
 
 3. **Create a new branch**
 
