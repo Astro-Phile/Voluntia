@@ -92,7 +92,7 @@ We're actively welcoming:
 - QA Testers
 - DevOps / Infra helpers
 
-📬 Join the conversation on **[Discord](#)**  
+📬 Join the conversation on **[Discord](https://discord.gg/ayVasDrv)**  
 📚 See [`CONTRIBUTING.md`](CONTRIBUTING.md) to get started  
 🪪 License: [MIT](LICENSE)
 
