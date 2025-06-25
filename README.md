@@ -16,6 +16,47 @@ We aim to create a fully open, transparent, and scalable volunteer management pl
 
 ---
 
+### 🌍 Why Voluntree?
+
+Millions of small-scale nonprofits, college-run initiatives, local clubs, and grassroots efforts do meaningful work — but struggle to manage volunteers due to:
+
+- Lack of free and customizable digital tools  
+- Complex or paywalled platforms that don’t fit their scale  
+- No way to track or retain volunteers meaningfully  
+- Fragmented workflows (e.g., spreadsheets, WhatsApp, verbal tracking)
+
+---
+
+### 💡 What Problem Does It Solve?
+
+Voluntree is built to solve the **gap between intent and action** in the volunteering ecosystem.  
+Organizations often **want to do more** — recruit, engage, manage, and recognize volunteers — but are held back by:
+
+- Manual volunteer tracking  
+- No scheduling or reminder system  
+- No history of participation or feedback  
+- Inability to personalize volunteer workflows
+
+Voluntree bridges that gap with:
+
+- ✅ A simple platform for volunteer onboarding and task management  
+- ✅ Event and role-based participation tracking  
+- ✅ Geo-local discovery of volunteering opportunities  
+- ✅ Transparent metrics for impact and participation  
+- ✅ Two-way feedback between volunteers and organizers
+
+---
+
+### 🧩 Who Is It For?
+
+- Local NGOs  
+- College and university clubs  
+- Grassroots civic groups  
+- Charity drives and micro-campaigns  
+- Any cause-driven group managing volunteers manually
+
+---
+
 ## 📦 Features (MVP)
 
 ✅ Volunteer Sign-Up / Login  
