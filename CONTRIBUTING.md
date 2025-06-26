@@ -88,7 +88,7 @@ If you’re working on the **main branch**, please ensure:
 Every contribution — big or small — makes Voluntree better.
 We value kindness, consistency, and collaboration. 🌍
 
-Come say hello in [Discord](#)
+Come say hello in [Discord](https://discord.gg/ayVasDrv)
 See our open [Issues](https://github.com/Astro-Phile/Voluntree/issues)
 Or pick something tagged **`good first issue`** and get started today!
 
