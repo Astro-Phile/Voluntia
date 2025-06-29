@@ -1,0 +1,13 @@
+# CODEOWNERS file for Voluntree
+
+# The entire repo
+* @Astro-Phile
+
+# Frontend folder owned by frontend team
+#/client/ @frontend-dev1 @frontend-dev2
+
+# Backend folder owned by backend team
+/server/ @Princess-Irulan
+
+# Docs owned by technical writer 
+#docs/ @techwriter
