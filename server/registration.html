@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login Form</title>
+</head>
+<body>
+  <h2>Login Form</h2>
+  <form action="http://localhost:5000/auth/signup" method="POST">
+    <label for="email">Email:</label><br />
+    <input type="email" id="email" name="email" required /><br /><br />
+
+    <label for="name">Name:</label><br />
+    <input type="text" id="name" name="name" required /><br /><br />
+
+    <label for="password">Password:</label><br />
+    <input type="password" id="password" name="password" required /><br /><br />
+
+    <label>Type:</label><br />
+    <input type="radio" id="volunteer" name="type" value="Volunteer" required />
+    <label for="volunteer">Volunteer</label><br />
+
+    <input type="radio" id="organiser" name="type" value="Organiser" />
+    <label for="organiser">Organiser</label><br /><br />
+
+    <button type="submit">Login</button>
+  </form>
+</body>
+</html>
