@@ -52,18 +52,18 @@ app.get("/",(req,res)=>{
 })
 
 app.get("/profile",(req,res)=>{
-  const token = req.cookies.token;
+  const token = req.cookies.token || req.headers.authorization?.split(' ')[1];
   if (!token) {
-    res.status(401).send("Error: Missing token");
-    return;
+    return res.status(401).send("Error: Missing token");
+    
   }
 
   try {
     const result = jwt.verify(token,process.env.JWT_SECRET);
     res.send(`Welcome:${result.name}`)
   } catch(err) {
-    res.status(401).send('Error: Invalid token');
-    return;
+    return res.status(401).send('Error: Invalid token');
+    
   };
 })
 
@@ -73,26 +73,27 @@ app.post("/auth/signup",async (req,res)=>{
   const plainPassword = req.body.password
 
   if (!email || !name || !type || !plainPassword) {
-  res.status(400).send("Required fields missing");
-  return;
+  return res.status(400).send("Required fields missing");
+  
   }
 
 
   if (!validator.isEmail(email)) {
-    res.status(400).send("Error:Invalid Email.");
-    return;
+    return res.status(400).send("Error:Invalid Email.");
+    
   };
   
-  const password = await bcrypt.hash(plainPassword,saltRounds)
 
   const userDoc = await User.findOne({email:email});
 
   if (userDoc) {
-    res.status(400).send("Email already exists, login instead.");
-    return;
+    return res.status(400).send("Email already exists, login instead.");
+    
   };
   
   try {
+    const password = await bcrypt.hash(plainPassword,saltRounds)
+
     const newUser = new User({
       email:email,
       name:name,
@@ -113,32 +114,32 @@ app.post("/auth/signup",async (req,res)=>{
 
   } catch (err) {
     res.status(500).send('Server Error.');
-    console.error(err);
-    return;
+    return console.error(err);
+    
   }
 });
 
 app.post("/auth/login",async (req,res)=>{
   const {email,password} = req.body;
   if (!email || !password) {
-  res.status(400).send("Error: Email and password are required.");
-  return;
+  return res.status(400).send("Error: Email and password are required.");
+  
   }
 
   if (!validator.isEmail(email)) {
-    res.status(400).send("Error:Invalid Email.");
-    return;
+    return res.status(400).send("Error:Invalid Email.");
+    
   };  
 
   const userDoc = await User.findOne({email:email});
   if (!userDoc) {
-    res.status(400).send("Invalid email, signup first.");
-    return;
+    return res.status(400).send("Invalid email, signup first.");
+    
   }
   const result = await bcrypt.compare(password,userDoc.password);
   if (!result) {
-    res.status(400).send('Incorrect password, try again');
-    return;
+    return res.status(400).send('Incorrect password, try again');
+    
   }
 try {
     const token = jwt.sign({
@@ -150,15 +151,17 @@ try {
     res.cookie('token',token,{maxAge:60*60*1000});
     res.redirect("/profile")
 } catch (err) {
-  res.status(500).send("Server error");
-  return;
+  return res.status(500).send("Server error");
+  
 }
 
 });
 
-app.listen(port,(err)=>{
-  if (err) {
-    console.error(err);
-  };
-  console.log(`Server running on port: ${port}`);
+
+app.get('/health', (req, res) => {
+  res.json({ status: "ok" });
+});
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`);
 });
