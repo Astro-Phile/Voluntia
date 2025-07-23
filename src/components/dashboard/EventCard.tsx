@@ -8,7 +8,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { MapPinIcon, UsersIcon, CalendarIcon, ImageIcon, BarChart3Icon, EditIcon } from "lucide-react";
+import { MapPinIcon, UsersIcon, CalendarIcon, ImageIcon, BarChart3Icon, EditIcon, QrCodeIcon } from "lucide-react";
 
 interface EventCardProps {
   title: string;
@@ -90,6 +90,10 @@ const EventCard = ({
         <Button variant="ghost" size="sm" className="gap-1">
           <EditIcon className="h-3.5 w-3.5" />
           Edit
+        </Button>
+        <Button variant="ghost" size="sm" className="gap-1">
+          <QrCodeIcon className="h-3.5 w-3.5" />
+          QR
         </Button>
         <Button variant="ghost" size="sm" className="gap-1">
           <BarChart3Icon className="h-3.5 w-3.5" />

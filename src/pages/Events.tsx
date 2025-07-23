@@ -3,7 +3,9 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import EventCard from "@/components/dashboard/EventCard";
+import DonationEventForm from "@/components/events/DonationEventForm";
 import {
   PlusIcon,
   CalendarIcon,
@@ -15,6 +17,8 @@ import {
 
 const Events = () => {
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
+  const [eventType, setEventType] = useState("all");
+  const [showDonationForm, setShowDonationForm] = useState(false);
 
   const upcomingEvents = [
     {
@@ -90,10 +94,24 @@ const Events = () => {
             Create and manage your organization's events
           </p>
         </div>
-        <Button>
-          <PlusIcon className="mr-2 h-4 w-4" />
-          Create Event
-        </Button>
+        <div className="flex gap-2">
+          <Select value={eventType} onValueChange={setEventType}>
+            <SelectTrigger className="w-[140px]">
+              <SelectValue placeholder="Event Type" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="all">All Events</SelectItem>
+              <SelectItem value="volunteer">Volunteer</SelectItem>
+              <SelectItem value="workshop">Workshop</SelectItem>
+              <SelectItem value="awareness">Awareness</SelectItem>
+              <SelectItem value="fundraiser">Fundraiser</SelectItem>
+            </SelectContent>
+          </Select>
+          <Button>
+            <PlusIcon className="mr-2 h-4 w-4" />
+            Create Event
+          </Button>
+        </div>
       </div>
 
       <div className="flex flex-col gap-4 md:flex-row md:items-center">
@@ -133,6 +151,10 @@ const Events = () => {
           </Button>
         </div>
       </div>
+
+      {eventType === "fundraiser" && (
+        <DonationEventForm />
+      )}
 
       <Tabs defaultValue="upcoming">
         <TabsList>
