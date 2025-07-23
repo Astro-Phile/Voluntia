@@ -1,8 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import StatCard from "@/components/dashboard/StatCard";
 import ActivityItem from "@/components/dashboard/ActivityItem";
 import EventCard from "@/components/dashboard/EventCard";
+import TimeBasedGreeting from "@/components/dashboard/TimeBasedGreeting";
+import QuickActions from "@/components/dashboard/QuickActions";
 import {
   UsersIcon,
   DollarSignIcon,
@@ -13,18 +16,16 @@ import {
   Leaf as TreeIcon,
   BarChart3Icon,
   EyeIcon,
+  AlertTriangleIcon,
+  MapPinIcon,
+  ClockIcon,
 } from "lucide-react";
 
 const Dashboard = () => {
   return (
     <div className="space-y-6">
       <div className="flex flex-col justify-between gap-4 md:flex-row md:items-center">
-        <div>
-          <h1 className="text-3xl font-bold tracking-tight">Dashboard</h1>
-          <p className="text-muted-foreground">
-            Welcome to your NGO management dashboard
-          </p>
-        </div>
+        <TimeBasedGreeting />
         <div className="flex gap-2">
           <Button variant="outline" size="sm">
             <EyeIcon className="mr-2 h-4 w-4" />
@@ -35,6 +36,22 @@ const Dashboard = () => {
             Generate Report
           </Button>
         </div>
+      </div>
+      
+      {/* Smart Alerts Panel */}
+      <div className="flex gap-2 overflow-x-auto pb-2">
+        <Badge variant="destructive" className="flex items-center gap-1 px-3 py-1">
+          <AlertTriangleIcon className="h-3 w-3" />
+          3 pending KYC verifications
+        </Badge>
+        <Badge variant="secondary" className="flex items-center gap-1 px-3 py-1">
+          <ClockIcon className="h-3 w-3" />
+          Event reminder: Blood donation in 2 hours
+        </Badge>
+        <Badge variant="outline" className="flex items-center gap-1 px-3 py-1">
+          <MapPinIcon className="h-3 w-3" />
+          5 volunteers active in field
+        </Badge>
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -67,6 +84,9 @@ const Dashboard = () => {
           isPositive={true}
         />
       </div>
+
+      {/* Quick Actions */}
+      <QuickActions />
 
       <div className="grid gap-6 lg:grid-cols-2">
         <Card>
@@ -112,6 +132,8 @@ const Dashboard = () => {
               location="City Hospital"
               volunteers={18}
               maxVolunteers={25}
+              category="Health Camp"
+              organizers="Dr. Smith, Nurse Jane"
             />
             <EventCard
               title="Legal Workshop"
@@ -119,7 +141,87 @@ const Dashboard = () => {
               location="Community Hall"
               volunteers={12}
               maxVolunteers={20}
+              category="Education"
+              organizers="Adv. Patel, Legal Team"
             />
+          </CardContent>
+        </Card>
+      </div>
+
+      {/* NGO Tools Integration */}
+      <div className="grid gap-6 lg:grid-cols-3">
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <MapPinIcon className="h-5 w-5" />
+              Active Volunteers
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-3">
+              <div className="flex items-center justify-between">
+                <span className="text-sm">Field Volunteers</span>
+                <Badge variant="secondary">5 Active</Badge>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-sm">Event Coordinators</span>
+                <Badge variant="secondary">3 Active</Badge>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-sm">On Break</span>
+                <Badge variant="outline">2 Volunteers</Badge>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <AlertTriangleIcon className="h-5 w-5" />
+              Pending Tasks
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-3">
+              <div className="flex items-center justify-between">
+                <span className="text-sm">KYC Verifications</span>
+                <Badge variant="destructive">3 Pending</Badge>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-sm">Document Renewals</span>
+                <Badge variant="secondary">2 Due</Badge>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-sm">Event Approvals</span>
+                <Badge variant="outline">1 Waiting</Badge>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <DollarSignIcon className="h-5 w-5" />
+              Recent Donations
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-3">
+              <div className="flex items-center justify-between">
+                <span className="text-sm">Today</span>
+                <Badge variant="default">₹15,000</Badge>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-sm">This Week</span>
+                <Badge variant="secondary">₹45,000</Badge>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-sm">Monthly Goal</span>
+                <Badge variant="outline">₹2,00,000</Badge>
+              </div>
+            </div>
           </CardContent>
         </Card>
       </div>

@@ -152,6 +152,8 @@ const Events = () => {
                 location={event.location}
                 volunteers={event.volunteers}
                 maxVolunteers={event.maxVolunteers}
+                category="Health Camp"
+                organizers="Dr. Smith, Nurse Jane"
               />
             ))}
           </div>
@@ -167,6 +169,8 @@ const Events = () => {
                 location={event.location}
                 volunteers={event.volunteers}
                 maxVolunteers={event.maxVolunteers}
+                category="Environment"
+                organizers="Green Team Lead"
               />
             ))}
           </div>
@@ -182,6 +186,8 @@ const Events = () => {
                 location={event.location}
                 volunteers={event.volunteers}
                 maxVolunteers={event.maxVolunteers}
+                category={event.id === 6 ? "Health Camp" : "Environment"}
+                organizers={event.id === 6 ? "Dr. Kumar, Medical Team" : "Coast Guard Team"}
               />
             ))}
           </div>
@@ -197,6 +203,18 @@ const Events = () => {
                 location={event.location}
                 volunteers={event.volunteers}
                 maxVolunteers={event.maxVolunteers}
+                category={
+                  event.title.includes("Blood") || event.title.includes("Medical") ? "Health Camp" :
+                  event.title.includes("Tree") || event.title.includes("Beach") ? "Environment" :
+                  event.title.includes("Legal") ? "Legal Aid" : "Education"
+                }
+                organizers={
+                  event.title.includes("Blood") ? "Dr. Smith, Nurse Jane" :
+                  event.title.includes("Legal") ? "Adv. Patel, Legal Team" :
+                  event.title.includes("Tree") ? "Green Team Lead" :
+                  event.title.includes("Medical") ? "Dr. Kumar, Medical Team" :
+                  event.title.includes("Beach") ? "Coast Guard Team" : "Tech Coordinator"
+                }
               />
             ))}
           </div>
