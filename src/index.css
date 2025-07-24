@@ -2,41 +2,70 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Voluntree Design System - Volunteer Platform Colors & Tokens
+All colors MUST be HSL format for consistency
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Voluntree Brand Colors */
+    --sunrise-yellow: 45 100% 64%;
+    --teal-green: 177 57% 47%;
+    --soft-coral: 0 85% 70%;
+    --off-white: 210 20% 98%;
+    --graphite-gray: 210 18% 25%;
+    --dusty-gray: 210 14% 69%;
+    --badge-blue: 210 79% 58%;
+    --alert-orange: 30 100% 63%;
 
+    /* Semantic Color Mapping */
+    --background: 210 20% 98%; /* off-white */
+    --foreground: 210 18% 25%; /* graphite-gray */
+    
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
+    --card-foreground: 210 18% 25%;
+    
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
+    --popover-foreground: 210 18% 25%;
+    
+    --primary: 177 57% 47%; /* teal-green */
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 210 18% 25%;
+    
+    --muted: 210 15% 93%;
+    --muted-foreground: 210 14% 69%; /* dusty-gray */
+    
+    --accent: 45 100% 64%; /* sunrise-yellow */
+    --accent-foreground: 210 18% 25%;
+    
+    --success: 177 57% 47%; /* teal-green */
+    --success-foreground: 0 0% 100%;
+    
+    --warning: 30 100% 63%; /* alert-orange */
+    --warning-foreground: 0 0% 100%;
+    
+    --destructive: 0 85% 70%; /* soft-coral */
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 210 15% 88%;
+    --input: 210 15% 88%;
+    --ring: 177 57% 47%;
+    
+    /* Design System Variables */
+    --radius: 0.75rem;
+    --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.05);
+    --shadow-elevated: 0 4px 16px rgba(0, 0, 0, 0.1);
+    
+    /* Animation Variables */
+    --transition-smooth: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--teal-green)), hsl(var(--sunrise-yellow)));
+    --gradient-warm: linear-gradient(135deg, hsl(var(--sunrise-yellow)), hsl(var(--soft-coral)));
+    --gradient-card: linear-gradient(180deg, hsl(var(--background)), hsl(var(--off-white)));
 
     --sidebar-background: 0 0% 98%;
 
@@ -101,5 +130,43 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    line-height: 1.5;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    font-weight: 600;
+  }
+}
+
+/* Custom utility classes for the design system */
+@layer utilities {
+  .bg-gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .bg-gradient-warm {
+    background: var(--gradient-warm);
+  }
+  
+  .bg-gradient-card {
+    background: var(--gradient-card);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
   }
 }
