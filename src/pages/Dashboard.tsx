@@ -39,18 +39,25 @@ export default function Dashboard() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <div className="bg-gradient-primary px-6 pt-12 pb-8 text-white">
+      {/* Mobile Header */}
+      <div className="bg-gradient-primary px-6 pt-8 pb-8 text-white md:hidden">
         <div className="flex items-center justify-between mb-4">
           <div>
             <h1 className="text-2xl font-bold">Hey {userName}! 👋</h1>
             <p className="text-white/90">You have {todayEvents.length} events today</p>
           </div>
-          <Button variant="ghost" size="icon" className="text-white hover:bg-white/20">
-            <Bell size={20} />
-          </Button>
         </div>
         <p className="text-lg text-white/95">Let's make an impact together!</p>
+      </div>
+
+      {/* Desktop Welcome Section */}
+      <div className="hidden md:block px-6 py-6 bg-gradient-primary text-white">
+        <div className="flex items-center justify-between">
+          <div>
+            <p className="text-lg text-white/95">Welcome back! You have {todayEvents.length} events today</p>
+            <p className="text-lg text-white/95">Let's make an impact together!</p>
+          </div>
+        </div>
       </div>
 
       <div className="px-6 -mt-4 space-y-6 pb-6">
