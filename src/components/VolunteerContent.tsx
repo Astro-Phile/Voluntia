@@ -152,7 +152,7 @@ const VolunteerContent = ({ onBack }: VolunteerContentProps) => {
               Ready to Start Your Journey?
             </h2>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Join our Founding 100 Volunteers and help shape the future of volunteering
+              Join thousands of volunteers already making a difference in their communities through Voluntree
             </p>
             
             <a 

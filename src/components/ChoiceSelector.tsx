@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 
 interface ChoiceSelectorProps {
-  onViewChange: (view: 'ngo' | 'volunteer') => void;
+  onViewChange: (view: 'organization' | 'volunteer') => void;
 }
 
 const ChoiceSelector = ({ onViewChange }: ChoiceSelectorProps) => {
@@ -17,7 +17,7 @@ const ChoiceSelector = ({ onViewChange }: ChoiceSelectorProps) => {
         
         <div className="flex flex-col sm:flex-row gap-6 max-w-2xl mx-auto">
           <Button
-            onClick={() => onViewChange('ngo')}
+            onClick={() => onViewChange('organization')}
             variant="outline"
             size="lg"
             className="flex-1 h-16 text-lg font-semibold border-2 border-border hover:border-brand-blue hover:bg-brand-blue hover:text-white transition-all duration-300 group"

@@ -67,17 +67,17 @@ const OrganizationContent = ({ onBack }: OrganizationContentProps) => {
       <section className="w-full py-20 bg-gradient-to-br from-muted/30 to-background">
         <div className="container mx-auto px-4 text-center">
           <h3 className="text-2xl font-bold mb-4 text-foreground">
-            Our First <span className="bg-gradient-to-r from-brand-green to-brand-blue bg-clip-text text-transparent">10 Partners</span>
+            Trusted by NGOs <span className="bg-gradient-to-r from-brand-green to-brand-blue bg-clip-text text-transparent">Worldwide</span>
           </h3>
           <p className="text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Building the foundation for lasting impact
+            Making a difference, one volunteer at a time
           </p>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-            <Stat value="10+" label="Partner NGOs" color="blue" />
-            <Stat value="100+" label="Early Volunteers" color="green" />
-            <Stat value="50+" label="Test Events" color="purple" />
-            <Stat value="₹10L+" label="MVP Funding" color="pink" />
+            <Stat value="10,000+" label="NGOs" color="blue" />
+            <Stat value="500K+" label="Volunteers" color="green" />
+            <Stat value="2M+" label="Events" color="purple" />
+            <Stat value="₹50Cr+" label="Donations" color="pink" />
           </div>
         </div>
       </section>
@@ -94,7 +94,7 @@ const OrganizationContent = ({ onBack }: OrganizationContentProps) => {
             </p>
             
             <a 
-              href="/ngo/login"
+              href="/organization/login"
               className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-brand-blue to-brand-green rounded-xl hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               Go to Dashboard
