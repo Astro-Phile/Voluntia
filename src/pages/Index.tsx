@@ -1,12 +1,41 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState } from "react";
+import Header from "@/components/Header";
+import HeroSection from "@/components/HeroSection";
+import ChoiceSelector from "@/components/ChoiceSelector";
+import OrganizationContent from "@/components/OrganizationContent";
+import VolunteerContent from "@/components/VolunteerContent";
+
+type ViewMode = 'default' | 'organization' | 'volunteer';
 
 const Index = () => {
+  const [viewMode, setViewMode] = useState<ViewMode>('default');
+
+  const handleViewChange = (view: 'organization' | 'volunteer') => {
+    setViewMode(view);
+  };
+
+  const handleBackToDefault = () => {
+    setViewMode('default');
+  };
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <Header />
+      
+      {viewMode === 'default' && (
+        <>
+          <HeroSection />
+          <ChoiceSelector onViewChange={handleViewChange} />
+        </>
+      )}
+      
+      {viewMode === 'organization' && (
+        <OrganizationContent onBack={handleBackToDefault} />
+      )}
+      
+      {viewMode === 'volunteer' && (
+        <VolunteerContent onBack={handleBackToDefault} />
+      )}
     </div>
   );
 };

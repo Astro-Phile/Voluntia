@@ -17,7 +17,7 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 208 100% 47%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -35,6 +35,21 @@ All colors MUST be HSL.
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
+
+    /* Voluntree Brand Colors */
+    --brand-blue: 208 100% 47%;
+    --brand-green: 159 84% 39%;
+    --brand-purple: 266 85% 58%;
+    --brand-pink: 339 82% 62%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(266 85% 58%), hsl(339 82% 62%));
+    --gradient-hero: linear-gradient(135deg, hsl(159 84% 39%), hsl(208 100% 47%));
+    --gradient-accent: linear-gradient(90deg, hsl(266 85% 58%), hsl(339 82% 62%));
+
+    /* Background variations */
+    --background-soft: 210 20% 98%;
+    --background-accent: 210 40% 96.1%;
 
     --radius: 0.5rem;
 
