@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 
 interface ChoiceSelectorProps {
-  onViewChange: (view: 'organization' | 'volunteer') => void;
+  onViewChange: (view: 'ngo' | 'volunteer') => void;
 }
 
 const ChoiceSelector = ({ onViewChange }: ChoiceSelectorProps) => {
@@ -17,7 +17,7 @@ const ChoiceSelector = ({ onViewChange }: ChoiceSelectorProps) => {
         
         <div className="flex flex-col sm:flex-row gap-6 max-w-2xl mx-auto">
           <Button
-            onClick={() => onViewChange('organization')}
+            onClick={() => onViewChange('ngo')}
             variant="outline"
             size="lg"
             className="flex-1 h-16 text-lg font-semibold border-2 border-border hover:border-brand-blue hover:bg-brand-blue hover:text-white transition-all duration-300 group"
@@ -26,7 +26,7 @@ const ChoiceSelector = ({ onViewChange }: ChoiceSelectorProps) => {
               <div className="w-8 h-8 rounded-lg bg-brand-blue/10 group-hover:bg-white/20 flex items-center justify-center transition-colors">
                 <span className="text-xl">🏢</span>
               </div>
-              I'm an ORGANIZATION
+              I'm an NGO/ORGANIZATION
             </div>
           </Button>
           
