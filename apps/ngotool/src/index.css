@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Main colors */
+    --background: 0 0% 100%;
+    --foreground: 222 14% 20%;
+
+    /* Card styles */
+    --card: 0 0% 100%;
+    --card-foreground: 222 14% 20%;
+    --card-hover: 164 85% 98%;
+
+    /* Popover styles */
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 14% 20%;
+
+    /* Primary - Google Blue (Trust) */
+    --primary: 221 83% 53%;
+    --primary-light: 221 83% 95%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Google Green (Growth) */
+    --secondary: 142 69% 58%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Muted colors */
+    --muted: 210 20% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    /* Accent - Google Yellow (Action) */
+    --accent: 45 100% 51%;
+    --accent-foreground: 0 0% 12%;
+
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* Success */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    /* Border, input, ring */
+    --border: 214 20% 91%;
+    --input: 214 20% 91%;
+    --ring: 221 83% 53%;
+
+    /* Radius */
+    --radius: 0.75rem;
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 222 14% 20%;
+    --sidebar-primary: 221 83% 53%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 221 83% 95%;
+    --sidebar-accent-foreground: 222 14% 20%;
+    --sidebar-border: 214 20% 91%;
+    --sidebar-ring: 221 83% 53%;
+
+    /* Animations */
+    --transition-fast: 0.15s ease;
+    --transition-default: 0.3s ease;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
+    --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.05), 0 4px 6px -2px rgba(0,0,0,0.03);
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(221 83% 53%), hsl(231 83% 53%));
+    --gradient-accent: linear-gradient(135deg, hsl(45 100% 51%), hsl(35 100% 51%));
+    --gradient-success: linear-gradient(135deg, hsl(142 69% 58%), hsl(152 69% 58%));
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%), hsl(210 20% 98%));
+  }
+
+  .dark {
+    /* Main colors */
+    --background: 222 30% 10%;
+    --foreground: 210 20% 98%;
+
+    /* Card styles */
+    --card: 222 25% 15%;
+    --card-foreground: 210 20% 98%;
+    --card-hover: 164 40% 18%;
+
+    /* Popover styles */
+    --popover: 222 25% 15%;
+    --popover-foreground: 210 20% 98%;
+
+    /* Primary - Google Blue (Trust) */
+    --primary: 221 83% 53%;
+    --primary-light: 221 40% 20%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Google Green (Growth) */
+    --secondary: 142 69% 58%;
+    --secondary-foreground: 210 20% 98%;
+
+    /* Muted colors */
+    --muted: 217 33% 20%;
+    --muted-foreground: 215 20% 70%;
+
+    /* Accent - Google Yellow (Action) */
+    --accent: 45 100% 51%;
+    --accent-foreground: 0 0% 12%;
+
+    /* Destructive */
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 210 20% 98%;
+
+    /* Success */
+    --success: 142 70% 35%;
+    --success-foreground: 0 0% 100%;
+
+    /* Border, input, ring */
+    --border: 217 33% 25%;
+    --input: 217 33% 25%;
+    --ring: 221 83% 53%;
+
+    /* Sidebar */
+    --sidebar-background: 222 35% 15%;
+    --sidebar-foreground: 210 20% 98%;
+    --sidebar-primary: 221 83% 53%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 222 25% 20%;
+    --sidebar-accent-foreground: 210 20% 98%;
+    --sidebar-border: 222 25% 20%;
+    --sidebar-ring: 221 83% 53%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(221 83% 53%), hsl(231 83% 53%));
+    --gradient-accent: linear-gradient(135deg, hsl(45 100% 51%), hsl(35 100% 51%));
+    --gradient-success: linear-gradient(135deg, hsl(142 69% 58%), hsl(152 69% 58%));
+    --gradient-card: linear-gradient(180deg, hsl(222 25% 15%), hsl(222 25% 12%));
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
