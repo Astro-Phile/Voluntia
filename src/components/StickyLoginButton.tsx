@@ -13,8 +13,8 @@ const StickyLoginButton = ({ viewMode, isAtBottom }: StickyLoginButtonProps) => 
     : "bg-gradient-to-r from-brand-purple to-brand-pink hover:scale-105";
   
   const sizeClasses = isAtBottom 
-    ? "px-8 py-4 text-lg mx-auto mb-8 block"
-    : "px-6 py-3 fixed bottom-6 left-1/2 transform -translate-x-1/2";
+    ? "px-4 py-2 text-sm mx-auto mb-8 block"
+    : "px-4 py-2 text-sm fixed bottom-6 left-1/2 transform -translate-x-1/2";
 
   return (
     <a 
