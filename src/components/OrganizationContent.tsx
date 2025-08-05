@@ -57,10 +57,10 @@ const OrganizationContent = ({ onBack }: OrganizationContentProps) => {
               color="purple"
             />
             <FeatureCard
-              icon="💝"
-              title="Donation Tracking"
-              description="Streamline donation collection and tracking with integrated payment solutions."
-              subText="Transparent tracking that builds trust with your community supporters."
+              icon="🎯"
+              title="Custom Features for Orgs"
+              description="Streamline operations with features tailored to your organization's unique workflow."
+              subText="Allow each NGO to tailor tags, forms, and scheduling to their unique needs."
               color="pink"
             />
           </div>

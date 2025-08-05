@@ -1,6 +1,6 @@
 const SuggestedEventWidget = () => {
   return (
-    <div className="bg-white rounded-xl p-6 shadow-sm border border-border hover:shadow-md transition-shadow">
+    <div className="bg-white rounded-xl p-6 shadow-sm border border-border hover:shadow-lg hover:scale-[1.03] hover:border-l-4 hover:border-l-orange-400 transition-all duration-300 cursor-pointer animate-fade-in">
       <div className="flex items-center justify-between mb-4">
         <h4 className="font-semibold text-foreground">Suggested for You</h4>
         <span className="text-lg">🎯</span>

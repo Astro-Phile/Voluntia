@@ -3,6 +3,7 @@ import { ArrowLeft } from "lucide-react";
 import ProgressWidget from "./ProgressWidget";
 import MyImpactWidget from "./MyImpactWidget";
 import SuggestedEventWidget from "./SuggestedEventWidget";
+import MapViewWidget from "./MapViewWidget";
 
 interface VolunteerContentProps {
   onBack: () => void;
@@ -37,10 +38,11 @@ const VolunteerContent = ({ onBack }: VolunteerContentProps) => {
 
           {/* Dashboard Widgets */}
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
               <ProgressWidget />
               <MyImpactWidget />
               <SuggestedEventWidget />
+              <MapViewWidget />
             </div>
             
             {/* Preview Animation */}

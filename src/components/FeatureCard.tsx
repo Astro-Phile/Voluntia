@@ -22,7 +22,7 @@ const FeatureCard = ({ icon, title, description, subText, color = 'blue' }: Feat
   };
 
   return (
-    <div className={`p-8 rounded-2xl border bg-gradient-to-br ${colorClasses[color]} hover:shadow-lg hover:scale-[1.03] transition-all duration-300 group cursor-pointer`}>
+    <div className={`p-8 rounded-2xl border bg-gradient-to-br ${colorClasses[color]} hover:shadow-lg hover:scale-[1.03] hover:border-l-4 hover:border-l-orange-400 transition-all duration-300 group cursor-pointer animate-fade-in`}>
       <div className={`w-16 h-16 ${iconBgClasses[color]} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
         <span className="text-2xl text-white">{icon}</span>
       </div>

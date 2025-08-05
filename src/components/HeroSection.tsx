@@ -15,15 +15,14 @@ const HeroSection = () => {
 
         {/* Main Headline */}
         <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-          The <span className="bg-gradient-to-r from-brand-green via-brand-blue to-brand-purple bg-clip-text text-transparent">Open-Source Tool</span>
+          The <span className="bg-gradient-to-r from-brand-green via-brand-blue to-brand-purple bg-clip-text text-transparent">Open-Source Platform</span>
           <br />
           for <span className="bg-gradient-to-r from-brand-purple to-brand-pink bg-clip-text text-transparent">Grassroots Causes</span>
         </h1>
 
         {/* Sub-headline */}
         <p className="text-xl text-muted-foreground max-w-4xl mx-auto mb-12 leading-relaxed">
-          Simple, flexible, and free volunteer management for the local communities 
-          and small-scale organizations that need it most.
+          A simple, flexible, and free platform to find and manage volunteer opportunities.
         </p>
 
         {/* Visual Container */}
