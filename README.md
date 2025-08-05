@@ -1,4 +1,4 @@
-# 🌳 Voluntree
+# 🌳 Voluntia
 
 **Voluntree** is an open-source volunteer and opportunity management platform designed to help communities, nonprofits, and organizers easily connect, schedule, and manage volunteers with clarity and compassion.
 
