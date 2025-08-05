@@ -16,8 +16,8 @@ const VolunteerContent = ({ onBack }: VolunteerContentProps) => {
       <div className="container mx-auto px-4 pt-8">
         <Button 
           onClick={onBack}
-          variant="ghost" 
-          className="mb-8 hover:bg-muted"
+          variant="outline" 
+          className="mb-8 bg-muted/50 backdrop-blur-sm hover:bg-muted fixed top-4 left-4 z-50 shadow-md"
         >
           <ArrowLeft className="w-4 h-4 mr-2" />
           Back to choices
@@ -32,7 +32,7 @@ const VolunteerContent = ({ onBack }: VolunteerContentProps) => {
               Your Personal Impact Dashboard
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Track your volunteer journey with gamified achievements, impact metrics, and personalized opportunities
+              Find verified NGOs and donation opportunities, track your contributions, and discover meaningful ways to help your community
             </p>
           </div>
 
@@ -58,32 +58,32 @@ const VolunteerContent = ({ onBack }: VolunteerContentProps) => {
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="text-center">
-                  <div className="w-20 h-20 bg-gradient-to-r from-brand-purple to-brand-pink rounded-2xl flex items-center justify-center mx-auto mb-4 animate-pulse">
-                    <span className="text-white text-3xl">🏆</span>
+                  <div className="w-20 h-20 bg-gradient-to-r from-brand-blue to-brand-green rounded-2xl flex items-center justify-center mx-auto mb-4 animate-pulse">
+                    <span className="text-white text-3xl">🎯</span>
                   </div>
-                  <h4 className="font-semibold mb-2">Earn Recognition</h4>
-                  <p className="text-sm text-muted-foreground">Unlock badges and certificates for your contributions</p>
+                  <h4 className="font-semibold mb-2">Find Verified NGOs</h4>
+                  <p className="text-sm text-muted-foreground">Discover trusted organizations near you with verified credentials</p>
                 </div>
                 
                 <div className="text-center">
-                  <div className="w-20 h-20 bg-gradient-to-r from-brand-blue to-brand-green rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-white text-3xl">📊</span>
+                  <div className="w-20 h-20 bg-gradient-to-r from-brand-purple to-brand-pink rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white text-3xl">💝</span>
                   </div>
-                  <h4 className="font-semibold mb-2">Track Your Growth</h4>
-                  <p className="text-sm text-muted-foreground">Visualize your volunteer journey and skill development</p>
+                  <h4 className="font-semibold mb-2">Secure Donations</h4>
+                  <p className="text-sm text-muted-foreground">Make verified donations to fundraising events with full transparency</p>
                 </div>
                 
                 <div className="text-center">
                   <div className="flex justify-center items-center gap-2 mb-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-brand-green to-brand-blue rounded-full flex items-center justify-center">
-                      <span className="text-white text-lg">👋</span>
+                      <span className="text-white text-lg">📍</span>
                     </div>
                     <div className="w-12 h-12 bg-gradient-to-r from-brand-purple to-brand-pink rounded-full flex items-center justify-center">
-                      <span className="text-white text-lg">🤝</span>
+                      <span className="text-white text-lg">🏆</span>
                     </div>
                   </div>
-                  <h4 className="font-semibold mb-2">Connect & Collaborate</h4>
-                  <p className="text-sm text-muted-foreground">Meet like-minded volunteers and build lasting friendships</p>
+                  <h4 className="font-semibold mb-2">Location & Impact Based</h4>
+                  <p className="text-sm text-muted-foreground">Find opportunities by location, urgency, and track your growing impact</p>
                 </div>
               </div>
             </div>

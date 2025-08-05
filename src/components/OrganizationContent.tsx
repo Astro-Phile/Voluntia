@@ -14,8 +14,8 @@ const OrganizationContent = ({ onBack }: OrganizationContentProps) => {
       <div className="container mx-auto px-4 pt-8">
         <Button 
           onClick={onBack}
-          variant="ghost" 
-          className="mb-8 hover:bg-muted"
+          variant="outline" 
+          className="mb-8 bg-muted/50 backdrop-blur-sm hover:bg-muted fixed top-4 left-4 z-50 shadow-md"
         >
           <ArrowLeft className="w-4 h-4 mr-2" />
           Back to choices
@@ -34,7 +34,7 @@ const OrganizationContent = ({ onBack }: OrganizationContentProps) => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             <FeatureCard
               icon="👥"
               title="Volunteer Management"
@@ -44,24 +44,38 @@ const OrganizationContent = ({ onBack }: OrganizationContentProps) => {
             />
             <FeatureCard
               icon="📅"
-              title="Event Planning"
-              description="Plan, manage, and track your events from conception to completion with integrated tools."
-              subText="Focus on long-term community building, not just one-off event logistics."
+              title="Event Planning & Attendance"
+              description="Plan, manage, and track your events with QR check-in and attendance tracking capabilities."
+              subText="QR code check-ins, attendance lists, and automated follow-ups for seamless event management."
               color="green"
+            />
+            <FeatureCard
+              icon="💰"
+              title="Fundraising & Grants"
+              description="Track donations, manage grant applications, and monitor funding sources for transparency."
+              subText="Simplified grant applications, donation tracking, and financial transparency tools for credibility."
+              color="purple"
+            />
+            <FeatureCard
+              icon="📋"
+              title="Document Management"
+              description="Securely store and organize all your organizational documents and credentials in one place."
+              subText="Maintain credibility with organized document storage, compliance tracking, and easy access controls."
+              color="pink"
             />
             <FeatureCard
               icon="📊"
               title="Impact Analytics"
               description="Measure and showcase your impact with comprehensive reporting and analytics tools."
               subText="Simple dashboards that help you tell your story to supporters and funders."
-              color="purple"
+              color="blue"
             />
             <FeatureCard
               icon="🎯"
               title="Custom Features for Orgs"
               description="Streamline operations with features tailored to your organization's unique workflow."
               subText="Allow each NGO to tailor tags, forms, and scheduling to their unique needs."
-              color="pink"
+              color="green"
             />
           </div>
         </div>
