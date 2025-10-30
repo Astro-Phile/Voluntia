@@ -1,9 +1,7 @@
 # CODEOWNERS file for Voluntree
 
-# The entire repo
 * @Astro-Phile
 
-# Frontend folder owned by frontend team
 # /client/ @frontend-dev1 @frontend-dev2
 
 # Backend folder owned by backend team
@@ -13,4 +11,4 @@
  /docs/ @karoltacang
 
 # design assets owned by core designer
-# /design/
+#/design/
