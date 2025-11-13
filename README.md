@@ -16,7 +16,7 @@ We aim to create a fully open, transparent, and scalable volunteer management pl
 
 ---
 
-### 🌍 Why Voluntria?
+### 🌍 Why Voluntia?
 
 Millions of small-scale nonprofits, college-run initiatives, local clubs, and grassroots efforts do meaningful work — but struggle to manage volunteers due to:
 
